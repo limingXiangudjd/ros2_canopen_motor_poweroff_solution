@@ -1,0 +1,24 @@
+# URDF 示例: 集成断电逻辑的硬件接口
+
+# 此 URDF 片段展示如何在 ros2_control 标签中配置 CAN 接口和节点 ID
+
+<?xml version="1.0"?>
+<robot name="my_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <ros2_control name="MyRobotSystem" type="system">
+    <hardware>
+      <!-- 替换为你的 hardware_interface 插件名 -->
+      <plugin>my_hardware_interface/ExampleHardwareInterface</plugin>
+      <param name="can_interface">can0</param>
+      <param name="node_id">1</param>
+    </hardware>
+
+    <joint name="motor_joint">
+      <command_interface name="velocity"/>
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
+
+</robot>

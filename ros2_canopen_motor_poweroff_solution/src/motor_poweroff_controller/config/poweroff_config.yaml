@@ -1,0 +1,5 @@
+# 独立断电节点配置
+motor_poweroff_node:
+  ros__parameters:
+    can_interface: "can0"    # CAN 接口名称
+    node_id: 1                # CANopen 节点 ID

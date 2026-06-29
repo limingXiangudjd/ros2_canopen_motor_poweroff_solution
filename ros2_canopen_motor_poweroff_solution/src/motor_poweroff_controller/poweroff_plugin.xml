@@ -1,0 +1,10 @@
+<library path="motor_poweroff_controller">
+  <class name="my_hardware_interface/ExampleHardwareInterface"
+         type="my_hardware_interface::ExampleHardwareInterface"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>
+      示例 Hardware Interface，集成了 CiA402 电机安全断电逻辑。
+      通过 SocketCAN 直接发送断电指令序列，不依赖 ROS Service。
+    </description>
+  </class>
+</library>

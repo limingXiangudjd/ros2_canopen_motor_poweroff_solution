@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>motor_poweroff_controller</name>
+  <version>1.0.0</version>
+  <description>CiA402 电机安全断电方案：通过 SocketCAN 直接发送断电指令序列</description>
+
+  <maintainer email="user@example.com">TODO</maintainer>
+  <license>Apache 2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>hardware_interface</depend>
+  <depend>pluginlib</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
